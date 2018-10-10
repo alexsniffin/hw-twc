@@ -3,7 +3,7 @@ package problemThree
 import org.scalatest.{FlatSpec, GivenWhenThen}
 
 class SubSeqSpec extends FlatSpec with GivenWhenThen {
-	info("Running FifthElementSpec")
+	info("Running SubSeqSpec")
 
 	"SubSeq containsSequence" should "check whether one sequence contains the other" in {
 		Given("two sequences")
