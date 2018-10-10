@@ -10,19 +10,19 @@ package problemOne
 sealed abstract class Triangle(val a: Point, val b: Point, val c: Point)
 
 case class EquilateralTriangle(
-		override val a: Point,
-		override val b: Point,
-		override val c: Point) extends Triangle(a: Point, b: Point, c: Point)
+	override val a: Point,
+	override val b: Point,
+	override val c: Point) extends Triangle(a: Point, b: Point, c: Point)
 
 case class IsoscelesTriangle(
-    override val a: Point,
-    override val b: Point,
-    override val c: Point) extends Triangle(a: Point, b: Point, c: Point)
+	override val a: Point,
+	override val b: Point,
+	override val c: Point) extends Triangle(a: Point, b: Point, c: Point)
 
 case class ScaleneTriangle(
-    override val a: Point,
-    override val b: Point,
-    override val c: Point) extends Triangle(a: Point, b: Point, c: Point)
+	override val a: Point,
+	override val b: Point,
+	override val c: Point) extends Triangle(a: Point, b: Point, c: Point)
 
 /**
 	* Companion of `Triangle`, constructs a new instance and checks whether it's equilateral, scalene, isosceles or
@@ -40,7 +40,7 @@ object Triangle {
 		* @param a first point
 		* @param b second point
 		* @param c third point
-		* @return Option of type Triangle
+		* @return  Option of type Triangle
 		*/
 	def check(a: Point, b: Point, c: Point): Option[Triangle] = {
 		val (d1, d2, d3): (Double, Double, Double) =
@@ -66,10 +66,10 @@ object Triangle {
 	/**
 		* Equal within some tolerance. Could be an implicit class
 		*
-		* @param x first value
-		* @param y second value
+		* @param x         first value
+		* @param y         second value
 		* @param precision the precision
-		* @return whether equal
+		* @return          whether equal
 		*/
 	def eqTol(x: Double, y: Double, precision: Double = 0.001): Boolean = {
 		if ((x - y).abs < precision) true
